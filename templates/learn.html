@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learn Mathematics - MathLab AI</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="/">
+            MathLab AI
+        </a>
+
+        <div>
+
+            <a class="nav-link d-inline text-white" href="/">
+                Home
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/ai">
+                AI Tutor
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/solver">
+                Solver
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/graph">
+                Graph Lab
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/quiz">
+                Quiz
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<div class="container mt-5">
+
+    <div class="text-center">
+
+        <h1>📚 Learn Mathematics</h1>
+
+        <p class="lead">
+            Explore concepts from your mathematics syllabus.
+        </p>
+
+    </div>
+
+
+    <h2 class="mt-5 mb-4">Unit I</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>Integers & Divisibility</h4>
+
+                    <p>
+                        Study integers, divisibility rules,
+                        factors, multiples and properties of integers.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>Euclid's Algorithm</h4>
+
+                    <p>
+                        Learn how repeated division can be used
+                        to calculate the Greatest Common Divisor.
+                    </p>
+
+                    <p>
+                        <strong>Example:</strong>
+                        GCD(252, 105) = 21
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>Congruence</h4>
+
+                    <p>
+                        Learn modular arithmetic and solve
+                        linear congruence problems.
+                    </p>
+
+                    <p>
+                        <strong>Notation:</strong>
+                        a ≡ b (mod n)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>Complex Numbers</h4>
+
+                    <p>
+                        Understand real and imaginary parts,
+                        modulus, argument and polar representation.
+                    </p>
+
+                    <p>
+                        <strong>Form:</strong>
+                        z = a + bi
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>De Moivre's Theorem</h4>
+
+                    <p>
+                        Learn how powers and roots of complex
+                        numbers can be calculated using polar form.
+                    </p>
+
+                    <p>
+                        <strong>Formula:</strong>
+                        (cos θ + i sin θ)ⁿ
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>Sequences</h4>
+
+                    <p>
+                        Study arithmetic and geometric sequences,
+                        nth terms and their properties.
+                    </p>
+
+                    <p>
+                        <strong>Arithmetic:</strong>
+                        aₙ = a₁ + (n − 1)d
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <h2 class="mt-5 mb-4">Unit II</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>Permutations</h4>
+
+                    <p>
+                        Arrangements where order matters.
+                    </p>
+
+                    <p>
+                        <strong>Formula:</strong>
+                        nPr = n! / (n-r)!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>Combinations</h4>
+
+                    <p>
+                        Selections where order does not matter.
+                    </p>
+
+                    <p>
+                        <strong>Formula:</strong>
+                        nCr = n! / r!(n-r)!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>Functions</h4>
+
+                    <p>
+                        Learn domain, codomain, range and
+                        different types of mathematical functions.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>Injective & Surjective</h4>
+
+                    <p>
+                        Understand one-one, onto and bijective
+                        functions with examples.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>Limits</h4>
+
+                    <p>
+                        Understand the value a function approaches
+                        as the input approaches a particular value.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4>Continuity</h4>
+
+                    <p>
+                        Learn the conditions required for a function
+                        to be continuous at a point.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Tutor - MathLab AI</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="/">
+            MathLab AI
+        </a>
+
+        <div>
+
+            <a class="nav-link d-inline text-white" href="/">
+                Home
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/solver">
+                Solver
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/graph">
+                Graph Lab
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<div class="container mt-5">
+
+    <div class="text-center">
+
+        <h1>🤖 AI Mathematics Tutor</h1>
+
+        <p class="lead">
+            Ask a mathematical question and get an explanation.
+        </p>
+
+    </div>
+
+
+    <div class="row justify-content-center mt-4">
+
+        <div class="col-md-8">
+
+            <div class="card shadow-sm">
+
+                <div class="card-body">
+
+                    <form method="POST">
+
+                        <label class="form-label">
+                            What do you want to learn?
+                        </label>
+
+                        <textarea
+                            name="question"
+                            class="form-control"
+                            rows="4"
+                            placeholder="Example: Explain Euclid's Algorithm"
+                            required></textarea>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary mt-3">
+                            Ask MathLab AI
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            {% if answer %}
+
+            <div class="card shadow-sm mt-4">
+
+                <div class="card-body">
+
+                    <h4>🤖 MathLab AI</h4>
+
+                   <div class="answer-box">
+
+    <h2>{{ answer.title }}</h2>
+
+    <hr>
+
+    <h5>📖 Definition</h5>
+    <p>{{ answer.definition }}</p>
+
+    <h5>💡 Explanation</h5>
+    <p>{{ answer.explanation }}</p>
+
+    <h5>📐 Formula</h5>
+    <div class="formula-box">
+        {{ answer.formula }}
+    </div>
+
+    <h5>⚠️ When is it applicable?</h5>
+    <p>{{ answer.conditions }}</p>
+
+    <h5>🪜 Step-by-Step Method</h5>
+
+    <ol>
+        {% for step in answer.steps %}
+        <li>{{ step }}</li>
+        {% endfor %}
+    </ol>
+
+    <h5>🧮 Worked Example</h5>
+
+    <div class="example-box">
+        {{ answer.example }}
+    </div>
+
+    <h5>⭐ Important Point</h5>
+    <p>{{ answer.important }}</p>
+
+</div>
+                       
+                    
+
+                </div>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

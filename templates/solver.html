@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Mathematical Solver - MathLab AI</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="/">
+            MathLab AI
+        </a>
+
+        <div>
+
+            <a class="nav-link d-inline text-white" href="/">
+                Home
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/learn">
+                Learn
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/ai">
+                AI Tutor
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/formulas">
+                Formulas
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/quiz">
+                Quiz
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<div class="container mt-5">
+
+    <div class="text-center">
+
+        <h1>🧮 Mathematical Solver</h1>
+
+        <p class="lead">
+            Enter a mathematical expression and get a
+            step-by-step solution.
+        </p>
+
+    </div>
+
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <form method="POST">
+
+                <label class="form-label">
+                    Mathematical Problem
+                </label>
+
+                <input
+                    type="text"
+                    name="problem"
+                    class="form-control"
+                    placeholder="Example: x**2 - 5*x + 6 = 0"
+                    value="{{ problem or '' }}"
+                    required>
+
+
+                <label class="form-label mt-3">
+                    Choose Operation
+                </label>
+
+                <select
+                    name="operation"
+                    class="form-select">
+
+                    <option value="solve">
+                        Solve Equation
+                    </option>
+
+                    <option value="simplify">
+                        Simplify
+                    </option>
+
+                    <option value="expand">
+                        Expand
+                    </option>
+
+                    <option value="factor">
+                        Factor
+                    </option>
+
+                    <option value="differentiate">
+                        Differentiate
+                    </option>
+
+                    <option value="integrate">
+                        Integrate
+                    </option>
+
+                    <option value="limit">
+                        Limit at x = 0
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary mt-4">
+
+                    Solve Step-by-Step
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    {% if result %}
+
+    <div class="card shadow-sm mt-4 mb-5">
+
+        <div class="card-body">
+
+            <h2>
+                {{ result.title }}
+            </h2>
+
+            <hr>
+
+
+            <h4>🪜 Solution Steps</h4>
+
+            <ol class="solution-steps">
+
+                {% for step in result.steps %}
+
+                <li>
+                    {{ step }}
+                </li>
+
+                {% endfor %}
+
+            </ol>
+
+
+            <div class="final-answer">
+
+                <h4>✅ Final Answer</h4>
+
+                <p>
+                    {{ result.answer }}
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+</div>
+
+
+</body>
+
+</html>

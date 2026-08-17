@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MathLab AI</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Our CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- ===================================================== -->
+<!-- NAVBAR -->
+<!-- ===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold"
+           href="/">
+            MathLab AI
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="/">
+                        Home
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="/learn">
+                        Learn
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="/ai">
+                        AI Tutor
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="/solver">
+                        Solver
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="/graph">
+                        Graph Lab
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="/quiz">
+                        Quiz
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="/formulas">
+                        Formulas
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ===================================================== -->
+<!-- HERO SECTION -->
+<!-- ===================================================== -->
+
+<section class="container text-center mt-5">
+
+    <h1 class="hero-title">
+        MathLab AI
+    </h1>
+
+
+    <p class="hero-text">
+        Your Intelligent Mathematics Learning Platform
+    </p>
+
+
+    <p class="text-muted mt-3">
+
+        Learn concepts.
+        Solve problems.
+        Visualize mathematics.
+        Test your understanding.
+
+    </p>
+
+
+    <a
+        href="/learn"
+        class="btn btn-primary btn-lg mt-3">
+
+        🚀 Start Learning
+
+    </a>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- MAIN TOOLS -->
+<!-- ===================================================== -->
+
+<section class="container mt-5">
+
+    <h2 class="text-center section-title mb-4">
+
+        Mathematics Tools
+
+    </h2>
+
+
+    <div class="row g-4">
+
+
+        <!-- AI TUTOR -->
+
+        <div class="col-md-4">
+
+            <div class="card h-100 shadow-sm feature-card">
+
+                <div class="card-body text-center">
+
+                    <h3>
+                        🤖 AI Tutor
+                    </h3>
+
+
+                    <p>
+
+                        Ask mathematics questions and get
+                        clear explanations, definitions,
+                        formulas, conditions and examples.
+
+                    </p>
+
+
+                    <a
+                        href="/ai"
+                        class="btn btn-primary">
+
+                        Try AI Tutor
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SOLVER -->
+
+        <div class="col-md-4">
+
+            <div class="card h-100 shadow-sm feature-card">
+
+                <div class="card-body text-center">
+
+                    <h3>
+                        🧮 Smart Solver
+                    </h3>
+
+
+                    <p>
+
+                        Solve equations, simplify expressions,
+                        factorize, differentiate and integrate
+                        mathematical expressions.
+
+                    </p>
+
+
+                    <a
+                        href="/solver"
+                        class="btn btn-primary">
+
+                        Open Solver
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GRAPH LAB -->
+
+        <div class="col-md-4">
+
+            <div class="card h-100 shadow-sm feature-card">
+
+                <div class="card-body text-center">
+
+                    <h3>
+                        📈 Graph Lab
+                    </h3>
+
+
+                    <p>
+
+                        Visualize mathematical functions
+                        using interactive, zoomable graphs.
+
+                    </p>
+
+
+                    <a
+                        href="/graph"
+                        class="btn btn-primary">
+
+                        Open Graph Lab
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- EXPLORE MATHEMATICS -->
+<!-- ===================================================== -->
+
+<section class="container mt-5">
+
+    <h2 class="text-center section-title mb-4">
+
+        Explore Mathematics
+
+    </h2>
+
+
+    <div class="row g-4">
+
+
+        <!-- LEARN -->
+
+        <div class="col-md-4">
+
+            <div class="card h-100 shadow-sm feature-card">
+
+                <div class="card-body text-center">
+
+                    <h3>
+                        📚 Learn
+                    </h3>
+
+
+                    <p>
+
+                        Explore mathematical concepts with
+                        definitions, formulas, explanations
+                        and worked examples.
+
+                    </p>
+
+
+                    <a
+                        href="/learn"
+                        class="btn btn-outline-primary">
+
+                        Start Learning
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- QUIZ -->
+
+        <div class="col-md-4">
+
+            <div class="card h-100 shadow-sm feature-card">
+
+                <div class="card-body text-center">
+
+                    <h3>
+                        🎯 Quiz
+                    </h3>
+
+
+                    <p>
+
+                        Test your understanding with
+                        mathematics questions and challenges.
+
+                    </p>
+
+
+                    <a
+                        href="/quiz"
+                        class="btn btn-outline-primary">
+
+                        Take Quiz
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FORMULA LIBRARY -->
+
+        <div class="col-md-4">
+
+            <div class="card h-100 shadow-sm feature-card">
+
+                <div class="card-body text-center">
+
+                    <h3>
+                        📐 Formula Library
+                    </h3>
+
+
+                    <p>
+
+                        Quickly find important formulas,
+                        meanings of symbols, conditions
+                        and examples.
+
+                    </p>
+
+
+                    <a
+                        href="/formulas"
+                        class="btn btn-outline-primary">
+
+                        View Formulas
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- HOW MATHLAB AI WORKS -->
+<!-- ===================================================== -->
+
+<section class="container mt-5 mb-5">
+
+    <h2 class="text-center section-title mb-4">
+
+        How MathLab AI Helps You
+
+    </h2>
+
+
+    <div class="row g-4">
+
+
+        <div class="col-md-3">
+
+            <div class="text-center">
+
+                <h3>📖</h3>
+
+                <h5>Learn</h5>
+
+                <p class="text-muted">
+
+                    Understand the mathematical concept.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="text-center">
+
+                <h3>🧮</h3>
+
+                <h5>Solve</h5>
+
+                <p class="text-muted">
+
+                    Work through mathematical problems.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="text-center">
+
+                <h3>📈</h3>
+
+                <h5>Visualize</h5>
+
+                <p class="text-muted">
+
+                    Understand mathematics through graphs.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="text-center">
+
+                <h3>🎯</h3>
+
+                <h5>Test</h5>
+
+                <p class="text-muted">
+
+                    Check your understanding with quizzes.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+
+<footer class="footer-section">
+
+    <div class="container text-center">
+
+        <h4>
+            MathLab AI
+        </h4>
+
+
+        <p>
+            Learn • Visualize • Solve • Understand
+        </p>
+
+
+        <p class="footer-copy">
+
+            © 2026 MathLab AI.
+            Educational Project.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>

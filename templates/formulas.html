@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Formula Library - MathLab AI</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="/">
+            MathLab AI
+        </a>
+
+        <div>
+
+            <a class="nav-link d-inline text-white" href="/">
+                Home
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/learn">
+                Learn
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/ai">
+                AI Tutor
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/solver">
+                Solver
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/graph">
+                Graph Lab
+            </a>
+
+            <a class="nav-link d-inline text-white" href="/quiz">
+                Quiz
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= PAGE HEADER ================= -->
+
+<div class="container mt-5">
+
+    <div class="text-center">
+
+        <h1>📐 Formula Library</h1>
+
+        <p class="lead">
+            Important mathematical formulas with symbols,
+            conditions and examples.
+        </p>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- EUCLID'S ALGORITHM -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-5">
+
+        <div class="card-body">
+
+            <h2>1. Euclid's Algorithm</h2>
+
+            <p>
+                Used to find the Greatest Common Divisor (GCD)
+                of two integers.
+            </p>
+
+
+            <h5>Formula</h5>
+
+            <div class="formula-box">
+                a = bq + r
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>a</strong> = dividend</li>
+                <li><strong>b</strong> = divisor</li>
+                <li><strong>q</strong> = quotient</li>
+                <li><strong>r</strong> = remainder</li>
+            </ul>
+
+
+            <h5>Condition</h5>
+
+            <p>
+                0 ≤ r &lt; b and b ≠ 0.
+            </p>
+
+
+            <h5>Example</h5>
+
+            <p>
+                252 = 105 × 2 + 42
+            </p>
+
+            <p>
+                105 = 42 × 2 + 21
+            </p>
+
+            <p>
+                42 = 21 × 2 + 0
+            </p>
+
+            <strong>
+                Therefore, GCD(252,105) = 21.
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- CONGRUENCE -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>2. Congruence</h2>
+
+            <p>
+                Two integers are congruent modulo n when they
+                leave the same remainder after division by n.
+            </p>
+
+
+            <h5>Formula</h5>
+
+            <div class="formula-box">
+                a ≡ b (mod n)
+            </div>
+
+
+            <h5>Equivalent condition</h5>
+
+            <div class="formula-box">
+                n | (a − b)
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>a</strong> = first integer</li>
+                <li><strong>b</strong> = second integer</li>
+                <li><strong>n</strong> = modulus</li>
+                <li><strong>|</strong> = "divides"</li>
+            </ul>
+
+
+            <h5>Condition</h5>
+
+            <p>
+                n must be a positive integer and must divide
+                the difference (a − b).
+            </p>
+
+
+            <h5>Example</h5>
+
+            <p>
+                17 ≡ 5 (mod 12)
+            </p>
+
+            <p>
+                Because 17 − 5 = 12 and 12 is divisible by 12.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- LINEAR CONGRUENCE -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>3. Linear Congruence</h2>
+
+            <p>
+                A linear congruence is an equation involving
+                modular arithmetic.
+            </p>
+
+
+            <h5>Formula</h5>
+
+            <div class="formula-box">
+                ax ≡ b (mod n)
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>a</strong> = coefficient of x</li>
+                <li><strong>x</strong> = unknown</li>
+                <li><strong>b</strong> = constant</li>
+                <li><strong>n</strong> = modulus</li>
+            </ul>
+
+
+            <h5>Important condition</h5>
+
+            <div class="formula-box">
+                gcd(a,n) divides b
+            </div>
+
+
+            <p>
+                A solution exists only when gcd(a,n) divides b.
+            </p>
+
+
+            <h5>Example</h5>
+
+            <p>
+                3x ≡ 6 (mod 9)
+            </p>
+
+            <p>
+                gcd(3,9) = 3 and 3 divides 6,
+                so solutions exist.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- COMPLEX NUMBERS -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>4. Complex Numbers</h2>
+
+            <p>
+                A complex number consists of a real part and
+                an imaginary part.
+            </p>
+
+
+            <h5>Standard form</h5>
+
+            <div class="formula-box">
+                z = a + bi
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>z</strong> = complex number</li>
+                <li><strong>a</strong> = real part</li>
+                <li><strong>b</strong> = imaginary coefficient</li>
+                <li><strong>i</strong> = imaginary unit</li>
+            </ul>
+
+
+            <h5>Important property</h5>
+
+            <div class="formula-box">
+                i² = −1
+            </div>
+
+
+            <h5>Modulus</h5>
+
+            <div class="formula-box">
+                |z| = √(a² + b²)
+            </div>
+
+
+            <h5>Example</h5>
+
+            <p>
+                For z = 3 + 4i:
+            </p>
+
+            <p>
+                |z| = √(3² + 4²) = √25 = 5
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- POLAR FORM -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>5. Polar Form of a Complex Number</h2>
+
+            <p>
+                Polar form represents a complex number using
+                its modulus and argument.
+            </p>
+
+
+            <h5>Formula</h5>
+
+            <div class="formula-box">
+                z = r(cos θ + i sin θ)
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>z</strong> = complex number</li>
+                <li><strong>r</strong> = modulus</li>
+                <li><strong>θ</strong> = argument</li>
+                <li><strong>i</strong> = imaginary unit</li>
+            </ul>
+
+
+            <h5>Finding r</h5>
+
+            <div class="formula-box">
+                r = √(a² + b²)
+            </div>
+
+
+            <h5>Finding θ</h5>
+
+            <div class="formula-box">
+                θ = tan⁻¹(b/a)
+            </div>
+
+
+            <p>
+                The correct quadrant must be considered when
+                finding the argument.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- DE MOIVRE -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>6. De Moivre's Theorem</h2>
+
+            <p>
+                De Moivre's theorem is used to calculate powers
+                and roots of complex numbers in polar form.
+            </p>
+
+
+            <h5>Formula</h5>
+
+            <div class="formula-box">
+                (cos θ + i sin θ)ⁿ
+                = cos(nθ) + i sin(nθ)
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>θ</strong> = argument</li>
+                <li><strong>n</strong> = integer power</li>
+                <li><strong>i</strong> = imaginary unit</li>
+            </ul>
+
+
+            <h5>When is it used?</h5>
+
+            <p>
+                It is especially useful for calculating powers
+                and roots of complex numbers.
+            </p>
+
+
+            <h5>Example</h5>
+
+            <div class="formula-box">
+                (cos θ + i sin θ)³
+                = cos(3θ) + i sin(3θ)
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- SEQUENCES -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>7. Sequences</h2>
+
+            <p>
+                A sequence is an ordered list of numbers.
+            </p>
+
+
+            <h5>Arithmetic Sequence</h5>
+
+            <div class="formula-box">
+                aₙ = a₁ + (n − 1)d
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>aₙ</strong> = nth term</li>
+                <li><strong>a₁</strong> = first term</li>
+                <li><strong>n</strong> = position of the term</li>
+                <li><strong>d</strong> = common difference</li>
+            </ul>
+
+
+            <h5>Convergence</h5>
+
+            <div class="formula-box">
+                lim(n→∞) aₙ = L
+            </div>
+
+
+            <p>
+                A sequence converges when its terms approach
+                a finite value L.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- PERMUTATIONS -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>8. Permutations</h2>
+
+            <p>
+                A permutation is an arrangement where order matters.
+            </p>
+
+
+            <h5>Formula</h5>
+
+            <div class="formula-box">
+                ⁿPᵣ = n! / (n − r)!
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>n</strong> = total number of objects</li>
+                <li><strong>r</strong> = number of objects arranged</li>
+                <li><strong>!</strong> = factorial</li>
+            </ul>
+
+
+            <h5>When do we use it?</h5>
+
+            <p>
+                Use permutations when the order of arrangement matters.
+            </p>
+
+
+            <h5>Example</h5>
+
+            <div class="formula-box">
+                5P2 = 5! / 3! = 20
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- COMBINATIONS -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>9. Combinations</h2>
+
+            <p>
+                A combination is a selection where order does not matter.
+            </p>
+
+
+            <h5>Formula</h5>
+
+            <div class="formula-box">
+                ⁿCᵣ = n! / [r!(n − r)!]
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>n</strong> = total number of objects</li>
+                <li><strong>r</strong> = number selected</li>
+                <li><strong>!</strong> = factorial</li>
+            </ul>
+
+
+            <h5>When do we use it?</h5>
+
+            <p>
+                Use combinations when the order does not matter.
+            </p>
+
+
+            <h5>Example</h5>
+
+            <div class="formula-box">
+                5C2 = 5! / (2!3!) = 10
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- INJECTIVE -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>10. Injective Function</h2>
+
+            <p>
+                An injective function is also called a one-to-one function.
+            </p>
+
+
+            <h5>Condition</h5>
+
+            <div class="formula-box">
+                f(a) = f(b) ⇒ a = b
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>f</strong> = function</li>
+                <li><strong>a, b</strong> = elements of the domain</li>
+                <li><strong>f(a), f(b)</strong> = corresponding outputs</li>
+            </ul>
+
+
+            <h5>Meaning</h5>
+
+            <p>
+                Two different inputs cannot have the same output.
+            </p>
+
+
+            <h5>Example</h5>
+
+            <p>
+                f(x) = 2x is injective over the real numbers.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- SURJECTIVE -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>11. Surjective Function</h2>
+
+            <p>
+                A surjective function is also called an onto function.
+            </p>
+
+
+            <h5>Condition</h5>
+
+            <div class="formula-box">
+                For every y ∈ B, there exists x ∈ A such that f(x) = y.
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>A</strong> = domain</li>
+                <li><strong>B</strong> = codomain</li>
+                <li><strong>x</strong> = input</li>
+                <li><strong>y</strong> = output</li>
+            </ul>
+
+
+            <h5>Meaning</h5>
+
+            <p>
+                Every element of the codomain must be reached.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- BIJECTIVE -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>12. Bijective Function</h2>
+
+            <p>
+                A function is bijective when it is both injective
+                and surjective.
+            </p>
+
+
+            <h5>Formula / Condition</h5>
+
+            <div class="formula-box">
+                Bijective = Injective + Surjective
+            </div>
+
+
+            <h5>What does this mean?</h5>
+
+            <ul>
+                <li>No two inputs have the same output.</li>
+                <li>Every element of the codomain is reached.</li>
+            </ul>
+
+
+            <h5>Important</h5>
+
+            <p>
+                A bijective function has an inverse function.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- INVERSE IMAGE -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>13. Inverse Image</h2>
+
+            <p>
+                The inverse image of a set contains all inputs
+                that map into that set.
+            </p>
+
+
+            <h5>Formula</h5>
+
+            <div class="formula-box">
+                f⁻¹(C) = {x ∈ A : f(x) ∈ C}
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>f</strong> = function</li>
+                <li><strong>A</strong> = domain</li>
+                <li><strong>C</strong> = subset of the codomain</li>
+                <li><strong>x</strong> = input</li>
+            </ul>
+
+
+            <h5>Example</h5>
+
+            <p>
+                If f(x) = x² and C = {4}, then:
+            </p>
+
+            <div class="formula-box">
+                f⁻¹({4}) = {-2, 2}
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- LIMITS -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4">
+
+        <div class="card-body">
+
+            <h2>14. Limits</h2>
+
+            <p>
+                A limit describes the value a function approaches
+                as x approaches a particular value.
+            </p>
+
+
+            <h5>Formula</h5>
+
+            <div class="formula-box">
+                lim(x→a) f(x) = L
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>x</strong> = input variable</li>
+                <li><strong>a</strong> = value x approaches</li>
+                <li><strong>f(x)</strong> = function</li>
+                <li><strong>L</strong> = limiting value</li>
+            </ul>
+
+
+            <h5>Condition</h5>
+
+            <p>
+                For a two-sided limit to exist, the left-hand and
+                right-hand limits must be equal.
+            </p>
+
+
+            <h5>Example</h5>
+
+            <div class="formula-box">
+                lim(x→2) x² = 4
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- CONTINUITY -->
+    <!-- ================================================= -->
+
+    <div class="card shadow-sm mt-4 mb-5">
+
+        <div class="card-body">
+
+            <h2>15. Continuity</h2>
+
+            <p>
+                A function is continuous at x = a when its value
+                and limiting behavior agree at that point.
+            </p>
+
+
+            <h5>Three Conditions</h5>
+
+            <div class="formula-box">
+                1. f(a) exists
+                <br>
+                2. lim(x→a) f(x) exists
+                <br>
+                3. lim(x→a) f(x) = f(a)
+            </div>
+
+
+            <h5>What do the symbols mean?</h5>
+
+            <ul>
+                <li><strong>f(a)</strong> = actual function value</li>
+                <li><strong>lim(x→a)f(x)</strong> = limiting value</li>
+                <li><strong>a</strong> = point being tested</li>
+            </ul>
+
+
+            <h5>When is it applicable?</h5>
+
+            <p>
+                All three conditions must be satisfied for the
+                function to be continuous at x = a.
+            </p>
+
+
+            <h5>Example</h5>
+
+            <p>
+                Polynomial functions such as:
+            </p>
+
+            <div class="formula-box">
+                f(x) = x²
+            </div>
+
+            <p>
+                are continuous for every real number.
+            </p>
+
+        </div>
+
+    </div>
+    
+<div class="text-center mb-5">
+
+    <a href="/" class="btn btn-primary">
+        ← Back to Home
+    </a>
+
+</div>
+
+</div>
+
+
+</body>
+
+</html>

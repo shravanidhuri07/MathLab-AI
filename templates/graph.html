@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Graph Lab - MathLab AI</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="/">
+            MathLab AI
+        </a>
+
+        <div>
+
+            <a class="nav-link d-inline text-white"
+               href="/">
+                Home
+            </a>
+
+            <a class="nav-link d-inline text-white"
+               href="/solver">
+                Solver
+            </a>
+
+            <a class="nav-link d-inline text-white"
+               href="/graph">
+                Graph Lab
+            </a>
+
+            <a class="nav-link d-inline text-white"
+               href="/formulas">
+                Formulas
+            </a>
+
+            <a class="nav-link d-inline text-white"
+               href="/quiz">
+                Quiz
+            </a>
+
+            <a class="nav-link d-inline text-white"
+               href="/ai">
+                AI Tutor
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<div class="container mt-5">
+
+    <div class="text-center">
+
+        <h1>📈 Interactive Graph Lab</h1>
+
+        <p class="lead">
+            Enter a mathematical function and visualize it
+            using an interactive graph.
+        </p>
+
+    </div>
+
+
+    <!-- ================= INPUT CARD ================= -->
+
+    <div class="row justify-content-center mt-4">
+
+        <div class="col-md-8">
+
+            <div class="card shadow-sm">
+
+                <div class="card-body">
+
+                    <h3>Enter a Function</h3>
+
+                    <p class="text-muted">
+                        Enter a function of x.
+                    </p>
+
+
+                    <form method="POST">
+
+                        <label class="form-label">
+                            Mathematical Function
+                        </label>
+
+
+                        <input
+                            type="text"
+                            name="expression"
+                            class="form-control"
+                            placeholder="Example: x^2, sin(x), cos(x), 2*x + 3"
+                            value="{{ expression or '' }}"
+                            required
+                        >
+
+
+                        <small class="text-muted d-block mt-2">
+
+                            Examples:
+
+                            <code>x^2</code>,
+
+                            <code>sin(x)</code>,
+
+                            <code>cos(x)</code>,
+
+                            <code>2*x + 3</code>,
+
+                            <code>sqrt(x)</code>
+
+                        </small>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary mt-3">
+
+                            📊 Generate Graph
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ERROR MESSAGE ================= -->
+
+            {% if error %}
+
+            <div class="alert alert-danger mt-4">
+
+                <strong>Unable to generate graph.</strong>
+
+                <br>
+
+                {{ error }}
+
+            </div>
+
+            {% endif %}
+
+
+            <!-- ================= GRAPH ================= -->
+
+            {% if graph_html %}
+
+            <div class="card shadow-sm mt-4 mb-5">
+
+                <div class="card-body">
+
+                    <h3>
+                        Generated Graph
+                    </h3>
+
+
+                    <p class="text-muted">
+
+                        Function:
+
+                        <strong>
+                            y = {{ expression }}
+                        </strong>
+
+                    </p>
+
+
+                    <div class="mt-4">
+
+                        {{ graph_html | safe }}
+
+                    </div>
+
+
+                    <div class="alert alert-info mt-3">
+
+                        🖱️ <strong>Interactive Graph</strong>
+
+                        <br>
+
+                        • Drag the graph to move around.
+
+                        <br>
+
+                        • Scroll to zoom in and out.
+
+                        <br>
+
+                        • Hover over the curve to see coordinates.
+
+                        <br>
+
+                        • Use the graph toolbar to reset the view.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endif %}
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="text-center mt-5 mb-4">
+
+    <p class="text-muted">
+        MathLab AI — Interactive Mathematics Learning Platform
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
