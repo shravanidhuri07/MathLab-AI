@@ -1,99 +1,398 @@
-body {
-    background-color: #f5f7fb;
-    color: #1f2937;
+/* =========================================================
+   MATHLAB AI - MODERN WEBSITE STYLING
+   ========================================================= */
+
+/* ---------- GENERAL ---------- */
+
+* {
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f6f8ff;
+    color: #172033;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    background: linear-gradient(135deg, #111827, #1e1b4b) !important;
+    padding: 14px 0;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
+}
+
+.navbar-brand {
+    font-size: 1.45rem;
+    letter-spacing: 0.3px;
+}
+
+.navbar-brand::before {
+    content: "∑ ";
+    color: #93c5fd;
+}
+
+.navbar .nav-link {
+    color: #dbeafe !important;
+    font-weight: 500;
+    margin-left: 8px;
+    padding: 8px 13px !important;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.navbar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: white !important;
+    transform: translateY(-1px);
+}
+
+
+/* ---------- HERO SECTION ---------- */
+
 .hero-section {
-    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 20px 90px;
+    margin-bottom: 20px;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(129, 140, 248, 0.25), transparent 30%),
+        radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.20), transparent 30%),
+        linear-gradient(135deg, #eef2ff, #f8fbff);
+    border-radius: 0 0 40px 40px;
+}
+
+.hero-section::before {
+    content: "∫   π   √   ∑   ∞";
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    font-size: 30px;
+    color: rgba(79, 70, 229, 0.08);
+    letter-spacing: 15px;
+    pointer-events: none;
+}
+
+.hero-section::after {
+    content: "x² + y² = r²";
+    position: absolute;
+    bottom: 25px;
+    left: 40px;
+    font-size: 28px;
+    color: rgba(37, 99, 235, 0.08);
+    pointer-events: none;
 }
 
 .hero-title {
-    font-size: 4rem;
-    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+
+    background: linear-gradient(90deg, #312e81, #2563eb, #4f46e5);
+    background-clip: text;
+    color: transparent;
 }
 
 .hero-text {
-    font-size: 1.25rem;
-    color: #6b7280;
+    position: relative;
+    z-index: 1;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+
+.hero-section .text-muted {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4f46e5, #2563eb);
+    border: none;
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+}
+
+.btn-outline-primary {
+    border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ---------- SECTION HEADINGS ---------- */
+
+.section-title {
+    position: relative;
+    font-weight: 800;
+    color: #172554;
+    margin-bottom: 40px !important;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #4f46e5, #2563eb);
+}
+
+
+/* ---------- CARDS ---------- */
+
+.card {
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.95);
+    overflow: hidden;
 }
 
 .feature-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-9px);
+    box-shadow: 0 18px 40px rgba(30, 41, 59, 0.14);
+    border-color: #c7d2fe;
 }
 
-.section-title {
+.feature-card .card-body {
+    padding: 30px 25px;
+}
+
+.feature-card h3 {
+    color: #1e1b4b;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
 
-.footer-section {
+.feature-card p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+
+/* ---------- ICON EFFECT ---------- */
+
+.feature-card h3:first-letter {
+    font-size: 1.15em;
+}
+
+
+/* ---------- HOW IT WORKS ---------- */
+
+.container .text-center h3 {
+    margin-bottom: 10px;
+}
+
+.container .text-center h5 {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.container .text-center p {
+    color: #64748b;
+}
+
+
+/* ---------- COPY & PASTE SECTION ---------- */
+
+.copy-section {
     margin-top: 80px;
-    padding: 40px 20px;
-    background-color: #111827;
-    color: white;
+    margin-bottom: 80px;
 }
 
-.footer-section h4 {
-    font-weight: 700;
+.copy-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #eef2ff
+    );
+
+    border: 1px solid #dbeafe;
+    box-shadow: 0 15px 40px rgba(30, 64, 175, 0.10);
 }
 
-.footer-section p {
-    margin-bottom: 8px;
+.copy-card h2 {
+    font-weight: 800;
+    color: #1e1b4b;
+    margin-bottom: 10px;
 }
 
-.footer-copy {
-    font-size: 0.9rem;
-    opacity: 0.7;
+.copy-card p {
+    color: #64748b;
 }
+
+.copy-textarea {
+    width: 100%;
+    min-height: 170px;
+    padding: 18px;
+
+    border: 2px solid #dbeafe;
+    border-radius: 14px;
+
+    background: white;
+    color: #1e293b;
+
+    font-size: 16px;
+    resize: vertical;
+
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.copy-textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.10);
+}
+
+.copy-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.copy-success {
+    display: none;
+    margin-top: 12px;
+    color: #15803d;
+    font-weight: 600;
+}
+
+
+/* ---------- ANSWER BOX ---------- */
 
 .answer-box {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+
     white-space: pre-line;
     line-height: 1.8;
-}
-
-.formula-box {
-    background-color: #eef2ff;
-    padding: 15px;
-    border-radius: 8px;
-    font-family: monospace;
-    margin-bottom: 20px;
-}
-
-.example-box {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-left: 4px solid #0d6efd;
-    border-radius: 5px;
-    white-space: pre-line;
-    margin-bottom: 20px;
 }
 
 .answer-box h5 {
     margin-top: 25px;
     font-weight: 700;
+    color: #1e1b4b;
 }
 
-/* Formula Library */
+
+/* ---------- FORMULA BOX ---------- */
 
 .formula-box {
-    background: #f1f5ff;
-    border-left: 5px solid #0d6efd;
-    padding: 15px 20px;
-    margin: 12px 0 20px 0;
-    border-radius: 8px;
+    background: #eef2ff;
+    border-left: 5px solid #4f46e5;
+
+    padding: 16px 20px;
+    margin: 15px 0 22px;
+
+    border-radius: 10px;
+
     font-family: "Courier New", monospace;
     font-size: 18px;
     font-weight: bold;
+
     white-space: pre-line;
+    overflow-x: auto;
 }
+
+
+/* ---------- EXAMPLE BOX ---------- */
+
+.example-box {
+    background: #f8fafc;
+    padding: 18px;
+
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+
+    white-space: pre-line;
+    margin-bottom: 20px;
+}
+
+
+/* ---------- SOLUTION STEPS ---------- */
+
+.solution-steps {
+    line-height: 2;
+    font-size: 17px;
+}
+
+.solution-steps li {
+    margin-bottom: 10px;
+}
+
+
+/* ---------- FINAL ANSWER ---------- */
+
+.final-answer {
+    margin-top: 30px;
+    padding: 22px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #eff6ff
+    );
+
+    border-left: 5px solid #4f46e5;
+}
+
+.final-answer p {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #1e1b4b;
+}
+
+
+/* ---------- GENERAL CARD CONTENT ---------- */
 
 .card h2 {
     margin-bottom: 15px;
@@ -112,25 +411,71 @@ body {
     line-height: 1.7;
 }
 
-.solution-steps {
-    line-height: 2;
-    font-size: 17px;
+
+/* ---------- FOOTER ---------- */
+
+.footer-section {
+    margin-top: 80px;
+    padding: 55px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1e1b4b
+        );
+
+    color: white;
 }
 
-.solution-steps li {
-    margin-bottom: 10px;
+.footer-section h4 {
+    font-weight: 800;
+    font-size: 1.5rem;
 }
 
-.final-answer {
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f1f5ff;
-    border-left: 5px solid #0d6efd;
+.footer-section p {
+    margin-bottom: 8px;
+    color: #dbeafe;
 }
 
-.final-answer p {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 0;
+.footer-copy {
+    font-size: 0.9rem;
+    opacity: 0.65;
+}
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding: 70px 20px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-text {
+        font-size: 1.1rem;
+    }
+
+    .hero-section::before,
+    .hero-section::after {
+        display: none;
+    }
+
+    .copy-card {
+        padding: 25px 18px;
+    }
+
+    .copy-buttons {
+        flex-direction: column;
+    }
+
+    .copy-buttons .btn {
+        width: 100%;
+    }
 }
